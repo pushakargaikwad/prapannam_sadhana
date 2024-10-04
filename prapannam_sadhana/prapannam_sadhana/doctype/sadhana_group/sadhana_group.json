@@ -7,7 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "manager",
-  "table_glao"
+  "members"
  ],
  "fields": [
   {
@@ -17,14 +17,15 @@
    "options": "User"
   },
   {
-   "fieldname": "table_glao",
+   "fieldname": "members",
    "fieldtype": "Table",
+   "label": "members",
    "options": "Sadhana Group Member"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-04 17:26:41.115994",
+ "modified": "2024-10-04 17:42:17.820938",
  "modified_by": "Administrator",
  "module": "Prapannam Sadhana",
  "name": "Sadhana Group",
