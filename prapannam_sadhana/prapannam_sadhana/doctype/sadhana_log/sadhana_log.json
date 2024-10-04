@@ -35,7 +35,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-04 16:03:06.477547",
+ "modified": "2024-10-04 17:19:22.139961",
  "modified_by": "Administrator",
  "module": "Prapannam Sadhana",
  "name": "Sadhana Log",
@@ -51,6 +51,14 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "if_owner": 1,
+   "read": 1,
+   "role": "Sadhana Member",
    "write": 1
   }
  ],
