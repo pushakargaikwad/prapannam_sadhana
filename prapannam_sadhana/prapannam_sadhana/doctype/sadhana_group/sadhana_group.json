@@ -1,44 +1,34 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-10-04 15:39:53.122254",
+ "autoname": "prompt",
+ "creation": "2024-10-04 15:56:06.862120",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "date",
-  "by",
-  "group"
+  "manager",
+  "table_glao"
  ],
  "fields": [
   {
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Date",
-   "reqd": 1
+   "fieldname": "manager",
+   "fieldtype": "Link",
+   "label": "Manager",
+   "options": "User"
   },
   {
-   "fieldname": "by",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "By",
-   "options": "User",
-   "reqd": 1
-  },
-  {
-   "fieldname": "group",
-   "fieldtype": "Link",
-   "label": "Group",
-   "options": "Sadhana Group",
-   "reqd": 1
+   "fieldname": "table_glao",
+   "fieldtype": "Table",
+   "options": "Sadhana Group Member"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-04 16:03:06.477547",
+ "modified": "2024-10-04 16:31:45.327929",
  "modified_by": "Administrator",
  "module": "Prapannam Sadhana",
- "name": "Sadhana Log",
+ "name": "Sadhana Group",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {
@@ -56,5 +46,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
