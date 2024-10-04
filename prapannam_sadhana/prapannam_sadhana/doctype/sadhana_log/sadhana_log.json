@@ -12,18 +12,22 @@
   {
    "fieldname": "date",
    "fieldtype": "Date",
-   "label": "Date"
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
   },
   {
    "fieldname": "by",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "By",
-   "options": "User"
+   "options": "User",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-04 15:44:13.522985",
+ "modified": "2024-10-04 15:49:41.665953",
  "modified_by": "Administrator",
  "module": "Prapannam Sadhana",
  "name": "Sadhana Log",
