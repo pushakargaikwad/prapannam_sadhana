@@ -7,7 +7,11 @@
  "field_order": [
   "date",
   "by",
-  "group"
+  "group",
+  "column_break_zkgu",
+  "total_points",
+  "section_break_ozic",
+  "log_items"
  ],
  "fields": [
   {
@@ -31,11 +35,32 @@
    "label": "Group",
    "options": "Sadhana Group",
    "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "log_items",
+   "fieldtype": "Table",
+   "label": "Log Items",
+   "options": "Sadhana Log Item"
+  },
+  {
+   "fieldname": "column_break_zkgu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_points",
+   "fieldtype": "Float",
+   "label": "Total Points",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "section_break_ozic",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-04 17:19:22.139961",
+ "modified": "2024-10-09 09:34:50.351115",
  "modified_by": "Administrator",
  "module": "Prapannam Sadhana",
  "name": "Sadhana Log",

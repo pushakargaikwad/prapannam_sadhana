@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-09 09:13:02.955967",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sadhana_type",
+  "rating",
+  "qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "sadhana_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sadhana Type",
+   "options": "Sadhana Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Float",
+   "label": "Points",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-09 09:32:47.192539",
+ "modified_by": "Administrator",
+ "module": "Prapannam Sadhana",
+ "name": "Sadhana Log Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
