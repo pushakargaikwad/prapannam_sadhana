@@ -8,7 +8,8 @@ from frappe.model.document import Document
 class SadhanaLog(Document):
 	
 	def before_save(self):
-		self.validate_log_entry_doesnt_exist()
+		# TODO validate if entry exists should be only for create and not save, as user can edit the entry
+		#self.validate_log_entry_doesnt_exist()
 		self.validate_user_is_member_of_group()
 
 	def validate_log_entry_doesnt_exist(self):
