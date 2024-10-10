@@ -33,3 +33,23 @@ def get_sadhana_by_date(date):
             "message": "Sadhana found",
             "sadhana_list": sadhana_list
         }
+
+@frappe.whitelist()
+def get_sadhana_log_items(sadhana_log):
+    sadhana_log_items = frappe.db.get_all("Sadhana Log Item",
+                                          filters={
+                                              "parent": sadhana_log
+                                          },
+                                          fields=["*"])
+    
+    if not sadhana_log_items:
+        return {
+            "status": "failed",
+            "message": "No Sadhana Log Items found for the given Sadhana Log"
+        }
+    else:
+        return {
+            "status": "ok",
+            "message": "Sadhana Log Items found",
+            "sadhana_log_items": sadhana_log_items
+        }

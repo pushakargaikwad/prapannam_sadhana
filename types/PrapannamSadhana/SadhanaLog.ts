@@ -16,4 +16,8 @@ export interface SadhanaLog{
 	by: string
 	/**	Group : Link - Sadhana Group	*/
 	group: string
+	/**	Total Points : Float	*/
+	total_points?: number
+	/**	Log Items : Table - Sadhana Log Item	*/
+	log_items?: any
 }

@@ -60,7 +60,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-09 09:34:50.351115",
+ "modified": "2024-10-10 09:25:07.186051",
  "modified_by": "Administrator",
  "module": "Prapannam Sadhana",
  "name": "Sadhana Log",
@@ -81,9 +81,9 @@
   {
    "create": 1,
    "delete": 1,
-   "if_owner": 1,
    "read": 1,
    "role": "Sadhana Member",
+   "select": 1,
    "write": 1
   }
  ],
