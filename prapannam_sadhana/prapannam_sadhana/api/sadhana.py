@@ -53,3 +53,32 @@ def get_sadhana_log_items(sadhana_log):
             "message": "Sadhana Log Items found",
             "sadhana_log_items": sadhana_log_items
         }
+
+@frappe.whitelist()
+def get_sadhana_groups():
+    # returns the sadhana group for the current user
+    current_user = frappe.session.user
+    
+    sadhana_group_members_list = frappe.db.get_all("Sadhana Group Member",
+                                        filters={"user": current_user},
+                                          fields=["*"]
+                                          )
+                                          
+
+    # the parent field in the sadhana_group_members_list is the group Name
+    sadhana_groups_list = []
+    for sadhana_group_member in sadhana_group_members_list: 
+        sadhana_groups_list.append(sadhana_group_member.parent)
+
+    if not sadhana_groups_list:
+        return {
+            "status": "failed",
+            "message": "No Sadhana Groups found for the given user"
+            }
+            
+    else:
+        return {
+            "status": "ok",
+            "message": "Sadhana Groups found",
+            "sadhana_groups_list": sadhana_groups_list
+        }
