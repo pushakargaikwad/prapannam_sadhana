@@ -1,3 +1,4 @@
+import { SadhanaLogItem } from './SadhanaLogItem'
 
 export interface SadhanaLog{
 	name: string
@@ -19,5 +20,5 @@ export interface SadhanaLog{
 	/**	Total Points : Float	*/
 	total_points?: number
 	/**	Log Items : Table - Sadhana Log Item	*/
-	log_items?: any
+	log_items?: SadhanaLogItem[]
 }
