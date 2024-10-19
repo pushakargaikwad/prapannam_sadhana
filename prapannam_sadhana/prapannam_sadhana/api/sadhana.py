@@ -82,3 +82,56 @@ def get_sadhana_groups():
             "message": "Sadhana Groups found",
             "sadhana_groups_list": sadhana_groups_list
         }
+    
+# API that creates Sadhana Log record for given date, user and group. then creates sadhana log items for that newly created Sadhana Log
+@frappe.whitelist()
+def create_sadhana_log_and_items():
+    #Get parameters from the POST request's form data
+    params = frappe.form_dict
+    current_user = frappe.session.user
+    # check if the user is a member of the given group
+    #TODO
+    print(f"User is {current_user}")
+    #Create Sadhana Log
+    sadhana_log_record = frappe.get_doc({
+        "doctype": "Sadhana Log", 
+        "date": params.get('date'), 
+        "by": current_user, 
+        "group": params.get('group')
+        })
+    sadhana_log_record.insert()
+    print(f"sadhana log record {sadhana_log_record}")
+    
+    # Create Sadhana Log Items
+    if sadhana_log_record:
+        sadhana_log_item = frappe.get_doc({
+            "doctype": "Sadhana Log Item", 
+            "sadhana_type": params.get('sadhana_type'),
+            "qty": params.get('qty'),
+            "parent": sadhana_log_record.name,
+            "parentfield": "log_items",
+            "parenttype": "Sadhana Log"
+            })
+        if sadhana_log_item:
+            print(f"sadhana log item {sadhana_log_item}")
+            sadhana_log_item.insert()
+            return {
+                "status": "ok", 
+                "message": "Sadhana Log and Sadhana Log Items created successfully",
+                "sadhana_log": sadhana_log_record,
+                "sadhana_log_items": sadhana_log_item
+                }
+        else:
+            return {
+                 "status":  "failed", 
+                 "message":  "Sadhana Log Item creation failed"
+                 }
+    else: 
+        return {
+             "status":  "failed", 
+             "message":  "Sadhana Log creation failed"
+             }
+    
+
+    
+
